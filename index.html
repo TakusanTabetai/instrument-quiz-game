@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楽器音当てクイズ</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div id="app" class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4 text-center">楽器音当てクイズ</h1>
+        
+        <!-- ホーム画面 -->
+        <div id="home-screen" class="bg-white p-6 rounded-lg shadow-lg">
+            <button id="start-game" class="bg-blue-500 text-white px-4 py-2 rounded mb-4 w-full">ゲームを始める</button>
+            <button id="view-high-scores" class="bg-green-500 text-white px-4 py-2 rounded w-full">ハイスコアを見る</button>
+        </div>
+
+        <!-- ゲーム画面 -->
+        <div id="game-screen" class="bg-white p-6 rounded-lg shadow-lg hidden">
+            <div id="question-counter" class="text-xl mb-4">問題: <span id="current-question">1</span>/10</div>
+            <div id="score" class="text-xl mb-4">スコア: <span id="current-score">0</span></div>
+            <button id="play-button" class="bg-blue-500 text-white px-4 py-2 rounded mb-4">音を再生</button>
+            <div id="choices" class="grid grid-cols-1 gap-2 mb-4">
+                <!-- 選択肢がここに動的に追加されます -->
+            </div>
+            <div id="result" class="text-xl font-bold mb-4"></div>
+            <button id="next-button" class="bg-green-500 text-white px-4 py-2 rounded hidden">次の問題</button>
+        </div>
+
+        <!-- リザルト画面 -->
+        <div id="result-screen" class="bg-white p-6 rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-bold mb-4">ゲーム結果</h2>
+            <p class="text-xl mb-4">最終スコア: <span id="final-score"></span></p>
+            <button id="play-again" class="bg-blue-500 text-white px-4 py-2 rounded mb-2 w-full">もう一度チャレンジ</button>
+            <button id="go-home" class="bg-green-500 text-white px-4 py-2 rounded mb-2 w-full">ホームに戻る</button>
+            <button id="view-high-scores-result" class="bg-yellow-500 text-white px-4 py-2 rounded w-full">ハイスコアを確認</button>
+        </div>
+
+        <!-- ハイスコア画面 -->
+        <div id="high-score-screen" class="bg-white p-6 rounded-lg shadow-lg hidden">
+            <h2 class="text-2xl font-bold mb-4">ハイスコア</h2>
+            <ul id="high-score-list" class="mb-4">
+                <!-- ハイスコアがここに動的に追加されます -->
+            </ul>
+            <button id="back-to-home" class="bg-blue-500 text-white px-4 py-2 rounded w-full">ホームに戻る</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

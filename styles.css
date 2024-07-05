@@ -1,0 +1,30 @@
+// 楽器データ
+const instruments = [
+  { name: 'ピアノ', audio: 'assets/audio/piano.mp3', image: 'assets/images/piano.svg' },
+  // 他の楽器を追加
+];
+
+let currentInstrument;
+let score = 0;
+
+function startGame() {
+  // ゲーム開始ロジック
+}
+
+function playSound() {
+  // 音声再生ロジック
+}
+
+function checkAnswer(answer) {
+  // 回答チェックロジック
+}
+
+function updateUI() {
+  // UI更新ロジック
+}
+
+// イベントリスナーの設定
+document.addEventListener('DOMContentLoaded', () => {
+  startGame();
+  // その他の初期化処理
+});
